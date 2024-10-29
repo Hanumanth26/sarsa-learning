@@ -23,12 +23,12 @@ Update the Q-value for the current state-action pair (S, A) using the SARSA upda
 ### Step 5:
 Update State and Action and repeat the step 3 untill the episodes ends.
 
-## SARSA LEARNING FUNCTION
-```
-DEVELOPED BY: hanumanth rao
-REF NO: 212222240016
-```
-```python3
+# SARSA LEARNING FUNCTION
+
+### DEVELOPED BY: Hanumanth rao
+### REGISTER NO: 212222240016
+```python
+
 def sarsa(env,
           gamma=1.0,
           init_alpha=0.5,
@@ -60,25 +60,30 @@ def sarsa(env,
       pi_track.append(np.argmax(Q,axis=1))
     V=np.max(Q,axis=1)
     pi=lambda s:{s:a for s,a in enumerate(np.argmax(Q,axis=1))}[s]
-    return Q, V, pi, Q_track, pi_track
+    return Q, V, pi, Q_track,pi_track
+
+
 ```
-## OUTPUT:
-### optimal policy, optimal value function , success rate for the optimal policy.
-)
-![Screenshot 2024-10-23 113233](https://github.com/user-attachments/assets/2bd438c0-981f-475a-9931-6d6645b04c78)
-![Screenshot 2024-10-23 113323](https://github.com/user-attachments/assets/a6db700e-8f6e-416c-ac40-efe20f0038f9)
+# OUTPUT:
+## optimal policy, optimal value function , success rate for the optimal policy.
+![Screenshot 2024-10-29 154719](https://github.com/user-attachments/assets/84b8bf62-25bc-4186-8377-2f159a5c0a22)
 
-
-### state value functions of Monte Carlo method:
-
-![Screenshot 2024-10-23 113418](https://github.com/user-attachments/assets/8c9123b2-0b5d-4a6a-be0d-ccf8e6b2fa12)
-
-
-### State value functions of SARSA learning:
-
-![Screenshot 2024-10-23 113446](https://github.com/user-attachments/assets/35695709-6f61-47fc-9a42-8b5791240af3)
+![Screenshot 2024-10-29 154740](https://github.com/user-attachments/assets/282e1936-664d-45da-91b0-5a9a35a09c42)
 
 
 
-## RESULT:
+## state value functions of Monte Carlo method:
+
+
+![Screenshot 2024-10-29 154804](https://github.com/user-attachments/assets/f2ceebfc-726c-4a6a-8aa9-f8cea0620efd)
+
+
+
+## State value functions of SARSA learning:
+
+
+![Screenshot 2024-10-29 154903](https://github.com/user-attachments/assets/981a16a1-ac9e-4b10-9669-e77eef060ab2)
+
+
+# RESULT:
 Thus to develop a Python program to find the optimal policy for the given RL environment using SARSA-Learning and compare the state values with the Monte Carlo method has been implemented successfully
